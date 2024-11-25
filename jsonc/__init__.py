@@ -2,7 +2,7 @@ import json
 import re
 import uuid
 import copy
-import collections
+import typing
 
 __version__ = '1.1.0'
 
@@ -180,7 +180,7 @@ def indexing_decorator(func):
 
     return decorated
 
-class JSONCList(collections.abc.MutableSequence):
+class JSONCList(typing.MutableSequence):
     def __init__(self, data=None, parent=None, key=None):
         if data is None:
             data = []
